@@ -10,7 +10,7 @@
 
 body {
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) 3fr 1.5fr;
+    grid-template-columns: minmax(250px, 1fr) 3fr 1.25fr;
     grid-template-rows: 1.35fr 0.15fr 6fr 0.5fr;
     gap: 12.5px;
 
@@ -108,7 +108,7 @@ a {
     background-color: var(--bright-orange-bgc);
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
-    padding: 1px 15px 10.25px 12.5px;
+    padding: 1px 15px 10.25px 7.5px;
     color: whitesmoke;
     margin-top: var(--top-margin);
 }
@@ -117,13 +117,6 @@ a {
     font-size: 60px;
     padding: 0;
     margin: 5px 0px 7.5px 15px;
-}
-
-.top-intro h3 {
-    font-weight: 300;
-    font-size: 16px;
-    padding: 0;
-    margin: 0px 0px 2.5px 20px;
 }
 
 .top-intro h5 {
@@ -149,6 +142,18 @@ a {
 
 .main-content {
     grid-row: 2 / span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 225px;
+    height: 275px;
+    border-radius: 5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .footer {
