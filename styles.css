@@ -1,0 +1,111 @@
+:root {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --android-green-bgc: #32de84;
+}
+
+body {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 4fr;
+    grid-template-rows: 1.5fr 5fr 0.55fr;
+    gap: 15px;
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+    background-color: var(--android-green-bgc);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar .logo-and-header {
+    margin: 25px 25px 0px 25px;
+    display: flex;
+    color: white;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar .logo-and-header span {
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.sidebar .logo-and-header .logo-grid-icon {
+    width: 32.5px;
+    height: 32.5px;
+    min-width: 32.5px;
+    min-height: 32.5px;
+    display: grid;
+    gap: 3px 3px;
+    grid-template-areas:
+        "top-left top-right"
+        "top-left top-right"
+        "top-left bottom-right"
+        "bottom-left bottom-right"
+        "bottom-left bottom-right";
+}
+
+.logo-grid-icon .top-left {
+    background-color: white;
+    grid-area: top-left;
+}
+
+.logo-grid-icon .top-right {
+    background-color: white;
+    grid-area: top-right;
+}
+
+.logo-grid-icon .bottom-left {
+    background-color: white;
+    grid-area: bottom-left;
+}
+
+.logo-grid-icon .bottom-right {
+    background-color: white;
+    grid-area: bottom-right;
+}
+
+.sidebar .nav-logos {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+    color: white;
+}
+
+.sidebar .nav-logos div {
+    display: grid;
+    grid-template-columns: 1.15fr 3fr;
+    grid-template-rows: repeat(4, 10px);
+}
+
+.sidebar .nav-logos i {
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.sidebar .nav-logos a {
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 550;
+}
+
+.footer {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    background-color: #5fa9e6;
+    color: white;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
