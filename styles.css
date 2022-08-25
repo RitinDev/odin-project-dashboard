@@ -5,6 +5,7 @@
     --bright-orange-bgc: #FF6347;
     --grey-bgc: #322e2e;
     --charcoal-bgc: rgb(51, 51, 51);
+    --dark-blue-bgc: #0b1620;
 
     --top-margin: 12.5px;
     --right-margin: 10px;
@@ -14,7 +15,7 @@
 body {
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 3fr 1.25fr;
-    grid-template-rows: 1.35fr 0.15fr 6fr 0.5fr;
+    grid-template-rows: 1.35fr 0.15fr 7fr 0.65fr;
     gap: 12.5px;
 
     margin: 0;
@@ -28,11 +29,15 @@ a {
 .sidebar {
     grid-column: 1 / span 1;
     grid-row: 1 / span 4;
-    background-color: var(--android-green-bgc);
+    background-color: var(--grey-bgc);
     display: flex;
     flex-direction: column;
     gap: 15px;
     box-shadow: -3px 0 5px 0 #555;
+}
+
+.sidebar.light {
+    background-color: var(--android-green-bgc);
 }
 
 .sidebar .logo-and-header {
@@ -121,7 +126,7 @@ a {
 }
 
 .top-intro {
-    background-color: var(--bright-orange-bgc);
+    background-color: var(--charcoal-bgc);
     grid-column: 2 / span 1;
     grid-row: 1 / span 1;
     padding: 1px 15px 10.25px 7.5px;
@@ -129,6 +134,10 @@ a {
     margin-top: var(--top-margin);
     border-radius: var(--colored-block-border-radius);
     text-align: center;
+}
+
+.top-intro.light {
+    background-color: var(--bright-orange-bgc);
 }
 
 .top-intro h1 {
@@ -148,12 +157,16 @@ a {
     grid-row: 1 / span 2;
     margin-top: var(--top-margin);
     margin-right: var(--right-margin);
-    background: linear-gradient(330deg, #48A9FE, #0BEEF9);
+    background-color: var(--grey-bgc);
     border-radius: var(--colored-block-border-radius);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 1.15s ease-in;
+}
+
+.top-side-content.light {
+    background: linear-gradient(330deg, #48A9FE, #0BEEF9);
 }
 
 .top-side-content span {
@@ -171,13 +184,17 @@ a {
     grid-row: 3 / span 1;
     grid-column: 3 / span 1;
     margin-right: var(--right-margin);
-    background: linear-gradient(145deg, #A594F9, #7556c9);
+    background-color: var(--charcoal-bgc);
     border-radius: var(--colored-block-border-radius);
     padding-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: whitesmoke;
+}
+
+.bottom-side-content.light {
+    background: linear-gradient(145deg, #A594F9, #7556c9);
 }
 
 .bottom-side-content h1 {
@@ -300,10 +317,14 @@ a {
 .footer {
     grid-column: 1 / span 3;
     grid-row: 4 / span 2;
-    background-color: var(--bright-blue-bgc);
+    background-color: var(--dark-blue-bgc);
     color: whitesmoke;
     font-size: 13.5px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer.light {
+    background-color: var(--bright-blue-bgc);
 }
