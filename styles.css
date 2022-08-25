@@ -6,6 +6,7 @@
 
     --top-margin: 12.5px;
     --right-margin: 10px;
+    --colored-block-border-radius: 12.5px;
 }
 
 body {
@@ -29,6 +30,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    box-shadow: -3px 0 5px 0 #555;
 }
 
 .sidebar .logo-and-header {
@@ -111,6 +113,8 @@ a {
     padding: 1px 15px 10.25px 7.5px;
     color: whitesmoke;
     margin-top: var(--top-margin);
+    border-radius: var(--colored-block-border-radius);
+    text-align: center;
 }
 
 .top-intro h1 {
@@ -131,6 +135,7 @@ a {
     margin-top: var(--top-margin);
     margin-right: var(--right-margin);
     background: linear-gradient(330deg, #48A9FE, #0BEEF9);
+    border-radius: var(--colored-block-border-radius);
 }
 
 .bottom-side-content {
@@ -138,6 +143,7 @@ a {
     grid-column: 3 / span 1;
     margin-right: var(--right-margin);
     background: linear-gradient(145deg, #A594F9, #7556c9);
+    border-radius: var(--colored-block-border-radius);
 }
 
 .main-content {
@@ -147,6 +153,7 @@ a {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-items: center;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .card {
@@ -154,6 +161,50 @@ a {
     height: 275px;
     border-radius: 5%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-size: cover;
+    box-shadow: inset 0 0 100px rgb(0, 0, 0, 0.03);
+    position: relative;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(105%);
+}
+
+.card .info {
+    width: inherit;
+    height: 60%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 2.5%;
+    /* border-top-left-radius: 0px;
+    border-top-right-radius: 0px; */
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.15s ease-out;
+}
+
+.card:hover .info {
+    height: 75%;
+}
+
+.card.one-EaS {
+    background-image: url(img/odin-etch-a-sketch.png);
+    background-position: 50%;
+}
+
+.card.two-SignUpForm {
+    background-image: url(img/odin-sign-up-form.png);
+}
+
+.card.three-calculator {
+    background-image: url(img/odin-calculator.png);
+    background-position: 0 -11.5px;
+}
+
+.card.four-landing-page {
+    background-image: url(img/odin-landing-page.png);
 }
 
 .footer {
