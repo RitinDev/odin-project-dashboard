@@ -160,6 +160,7 @@ a {
     color: whitesmoke;
     font-size: 1.75rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .top-side-content span:hover {
@@ -172,6 +173,30 @@ a {
     margin-right: var(--right-margin);
     background: linear-gradient(145deg, #A594F9, #7556c9);
     border-radius: var(--colored-block-border-radius);
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.bottom-side-content h1 {
+    margin-top: 17.5px;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.bottom-side-content span {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.bottom-side-content #break {
+    width: 1.25rem;
+    height: 2px;
+    background-color: whitesmoke;
 }
 
 .main-content {
