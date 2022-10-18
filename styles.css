@@ -295,7 +295,9 @@ a {
 }
 
 .card.two-SignUpForm {
-    background-image: url(img/odin-sign-up-form.png);
+    background-image: url(img/odin-tic-tac-toe.png);
+    background-position: 10px 8.5px;
+    background-size: 100%;
 }
 
 .card.three-calculator {
